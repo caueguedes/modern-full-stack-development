@@ -1,0 +1,21 @@
+// NPM COMMANDS
+
+// finding and fixing vulnerabilitys
+npm audit
+npm audit fix
+npm audit --json
+npm audit --readable
+npm audit fix --dry-run
+
+// Search for duplicated packages and up them in the three sharing bet$
+npm dedup
+npm prune
+
+
+npm search <package> 
+npm update
+
+npm login
+npm publish
+npm remove // avoid removing packages use deprecate instead.
+npm deprecate
