@@ -1,0 +1,8 @@
+// "http://mysite.com/?account=36764&add=125";
+
+let parsedURL = url.parse(request.url);
+let parsedParams = querystring.parse(parsedURL); //{ account : "36764", add : "125" }
+
+const qs = querystring.stringify({
+    account : 36764, add : 125
+});

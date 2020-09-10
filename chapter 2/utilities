@@ -1,0 +1,23 @@
+const util = require("util");
+
+util.format("%s:%s", "aa", "bb", "cc");
+
+
+
+const newStat = util.promisify(fs.stat);
+
+newStat("/home/fzammetti")
+.then((inStats) => { console.log(inStats);
+})
+.catch((inError) => { console.log(inError);
+});
+
+
+util.types.isArrayBuffer();
+util.types.isBigInt64Array();
+util.types.isBooleanObject();
+util.types.isDate();
+util.types.isMap();
+util.types.isPromise(); 
+util.types.isUint32Array();
+util.inspect()

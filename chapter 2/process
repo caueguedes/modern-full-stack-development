@@ -1,0 +1,9 @@
+process.abort();
+
+process.verision;
+
+process.uptime();
+
+process.mainModule
+
+process.env

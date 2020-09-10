@@ -1,0 +1,5 @@
+const path = require("path");
+
+path.basename("/my/path/index.html"); // index.html
+path.dirname("my/path/index.html"); // "/some/path"
+path.extname("my/path/index.html"); // ".html"

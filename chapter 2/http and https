@@ -1,0 +1,38 @@
+// HTTPS SERVER
+const fs = require("fs");
+const server = require("https").createServer(
+    {
+        key: fs.readFileSync("my_key.pem"),
+        cert: fs.readFileSync("my_cert.pem")
+    },
+    (inRequest, inResponse) => {
+        inResponse.writeHead(200);
+        inResponse.end("I am protected by TLS!");
+    }
+).listen(443);
+
+
+// HTTP REQUEST OBJECT
+let finalResponse = "";
+
+const request = require("http").request(
+    {
+        hostname : "www.some_remote_system.com",
+        port : 80,
+        path : "/someAPI",
+        method : "POST":
+    },
+    (inResponse) => {
+        console.log(`Status: ${inResponse.statusCode}`);
+        inResponse.setEncoding("utf8");
+        inResponse.on("data", (inDataChunk) => {
+            finalResponse += inDataChunk.
+        });
+        inResponse.on("end", () => {
+            console.log(finalResponse);
+        });
+    }
+);
+
+request.write("Some data to send to the remote system");
+request.end();
