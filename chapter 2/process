@@ -6,4 +6,4 @@ process.uptime();
 
 process.mainModule
 
-process.env
+process.env;

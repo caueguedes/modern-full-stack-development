@@ -3,3 +3,12 @@ const path = require("path");
 path.basename("/my/path/index.html"); // index.html
 path.dirname("my/path/index.html"); // "/some/path"
 path.extname("my/path/index.html"); // ".html"
+
+path.parse("/home/users/mydata/accounts.dat"); 
+
+{ root : "/", dir : "/home/users/mydata",
+  base : "accounts.dat", ext : ".dat", name : "accounts" }
+
+
+path.join("/my", "path", "index.htm"); // "my\path\index.htm"
+path.normalize("C:////tmp\\/\\/dat.md") // "C:\\temp\\dat.md"

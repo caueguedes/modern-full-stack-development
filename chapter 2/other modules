@@ -1,0 +1,25 @@
+Assert
+async_hooks
+Buffer
+C++ addons
+child_process
+cluster
+console
+crypto
+dns
+http/2
+inspector
+net
+perf_hooks
+readline
+repl
+stream
+string_decoder //decode buffer objects to preserve encoded multi-byte UTF-8 and UTF-16
+timer
+tls/ssl
+tty // tty.ReadStream tty.WriteStream
+dgram //udp datagram sockets
+v8
+vm
+worker
+zlib

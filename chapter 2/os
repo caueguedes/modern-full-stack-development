@@ -1,2 +1,10 @@
 const os = require("os");
 
+os.EOL
+
+os.cpus();
+os.freemem(); //return an integre with the value of system free mem avaible in bytes
+os.homedir();
+os.hostname();
+os.tempdir();
+
