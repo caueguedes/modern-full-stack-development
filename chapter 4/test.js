@@ -1,0 +1,1 @@
+const newArray = [ 44, 56, 66].map((num) => n * 2);

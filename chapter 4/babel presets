@@ -1,0 +1,19 @@
+{ "presets": [
+    [ "@babel/preset-env", {
+      "targets" : {
+        "browsers" : [ "last 3 versions", "safari >= 6" ]
+      }
+    }]
+  ]
+}
+
+
+//When you only care about the javascript not browsers
+{ "presets" : [
+    [ "@babel/preset-env", {
+      "targets" : { "node" : "7.00" }
+    }]
+  ]
+}
+
+npm install --save-dev @babel/preset-env
