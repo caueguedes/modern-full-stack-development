@@ -1,0 +1,11 @@
+//add to tsconfig.json
+experimentalDecorators:true
+
+
+//
+npm install --save lodash
+npm install --save-dev @types/lodash
+
+import * as _ from "lodash";
+_padStart("TypeScript + Lodash = COOL!", 10, "*");
+// Exclude node_modules from tsc compilation

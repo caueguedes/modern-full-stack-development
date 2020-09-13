@@ -1,0 +1,17 @@
+tsc --sourceMap app.ts
+
+// will generate a file like
+{
+  "version": 3,
+  "file": "app.js",
+  "sourceRoot": "",
+  "sources": [ "app.ts" ],
+  "names": [ ],
+  
+"mappings": "AAAA,SAAS,KAAK,CAAC,SAAiB;IAC9B,KAAK,CAAC,YAAU,SAAS,MAAG,CAAC,
+CAAC;AAChC,CAAC;AACD,KAAK,CAAC,gBAAgB,CAAC,CAAC"
+}
+
+// This add the line:
+//# sourceMappingURL=app.js.map
+// to the file what tells to the browser how to map the files
