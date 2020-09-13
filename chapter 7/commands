@@ -1,0 +1,44 @@
+npm init -y
+
+npm install --save-dev webpack
+npx webpack 
+
+
+//npm install webpack webpack-cli --save-dev
+npx webpack init
+
+//npm i webpack-cli@beta
+npm i -D @webpack-cli/init@0.2.2
+
+
+// webpack getting started
+//https://webpack.js.org/guides/getting-started/
+
+
+npm install --save-dev typescript ts-loader
+npx tsc -init
+
+//CREATED
+{
+  test: /.(js|jsx)$/,
+  include: [path.resolve(__dirname, 'src')],
+  loader: 'babel-loader',
+  options: {
+    plugins: ['syntax-dynamic-import'],
+    presets: [
+      [
+        '@babel/preset-env',
+        {
+          modules: false
+        }
+      ]
+    ]
+  }
+}
+
+//REPLACE WITH
+{
+  test: /\.ts?$/,
+  use: 'ts-loader',
+  exclude: /node_modules/,
+}
