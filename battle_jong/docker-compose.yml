@@ -1,0 +1,23 @@
+version: '3'
+
+services: 
+  server:
+    build: server/.
+    ports:
+      - "80:80"
+    volumes:
+      - ./server:/usr/src/app
+    # env_file: 
+      # - ".env/web"
+    tty: true
+    stdin_open: true
+
+
+  # client:
+  #   build: client/.
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - ./client:/usr/src/app
+  #   tty: true
+  #   stdin_open: true

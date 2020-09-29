@@ -1,0 +1,6 @@
+npm init
+
+npm install typescritp --save-dev
+npx tsc -init
+
+npm install nodemon --save-dev
