@@ -34,6 +34,6 @@ const ContactView = ({ state }) => (
       </Button>
     }
   </form>
-)
+);
  
 export default ContactView;

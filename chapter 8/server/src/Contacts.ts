@@ -8,17 +8,17 @@ export interface IContact {
   email: string
 }
 
-export class Worker {
 
+export class Worker {
   private db: Nedb;
 
   constructor() {
-
     this.db = new Datastore({
       filename : path.join(__dirname, "contacts.db"),
       autoload : true
     });
   } /* End constructor. */
+
 
   public listContacts(): Promise<IContact[]> {
     console.log("Contacts.Worker.listContacts()");
@@ -28,8 +28,10 @@ export class Worker {
         {},
         (inError: Error, inDocs: IContact[]) => {
           if (inError) {
+            console.log("Contacts.Worker.listContacts(): Error", inError);
             inReject(inError);
           } else {
+            console.log("Contacts.Worker.listContacts(): Ok", inDocs);
             inResolve(inDocs);
           }
         }
@@ -37,19 +39,26 @@ export class Worker {
     });
   } /* End listContacts(). */
 
+
   public addContact(inContact: IContact): Promise<IContact> {
+    console.log("Contacts.Worker.addContact()", inContact);
+
     return new Promise((inResolve, inReject) => {
-      this.db.insert(inContact, 
+      this.db.insert(
+        inContact,
         (inError: Error | null, inNewDoc: IContact) => {
           if (inError) {
+            console.log("Contacts.Worker.addContact(): Error", inError);
             inReject(inError);
           } else {
+            console.log("Contacts.Worker.addContact(): Ok", inNewDoc);
             inResolve(inNewDoc);
           }
         }
       );
     });
-  }
+  } /* End addContact(). */
+
 
   public deleteContact(inID: string): Promise<string> {
     console.log("Contacts.Worker.deleteContact()", inID);

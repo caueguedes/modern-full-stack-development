@@ -56,11 +56,13 @@ class BaseLayout extends Component {
             }
           </div>
         </div>
+
+       <div className="contactList"><ContactList state={ this.state } /></div>
       </div>
 
     );
  
-  } /* End render(). */
-} /* End class. */
+  } 
+}
 
 export default BaseLayout;
