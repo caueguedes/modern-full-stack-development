@@ -4,3 +4,10 @@ npm install typescritp --save-dev
 npx tsc -init
 
 npm install nodemon --save-dev
+
+npm install express --save
+npm install ws --save
+
+npm install @types/node --save-dev
+npm install @types/express --save-dev
+npm install @types/ws --save-dev
