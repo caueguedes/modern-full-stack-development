@@ -60,8 +60,20 @@ wsServer.on("connection", (socket: WebSocket) => {
           );
         } 
       break;
+    } // end switch
+  }); // end message handler
 
+  const pid: string = `pid${new Date().getTime()}`;
 
-    }
-  });
+  players[pid] = { score : 0, stillPlaying : true };
+
+  socket.send(`connected_${pid}`);
+  if (Object.keys(players).length === 2) {
+    const shuffledLayout: number[][][] = shuffle();
+    wsServer.clients.forEach(
+      function each(inClient: WebSocket) {
+        inClient.send(`start_${JSON.stringify(shuffledLayout)}`);
+      }
+    );
+  }
 });
